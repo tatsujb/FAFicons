@@ -69,39 +69,39 @@ void main()
 	//toogle apperace between selected, unselected and mouseover
 	//for body (is either ipi or pip depending on how light or dark) (basically team color) :
 	vec4 body;	
-    if (v_SelectedState > 1.4)
-            body = White;                        //selected + mouseover
-        else if (v_SelectedState > 0.9)
-            body = v_ColorPrimary;      //selected
-        else                        
-            body = Green;                         //unselected
+	if (v_SelectedState > 0.9) 
+            body = White;               //selected
+        else if (v_SelectedState > 0.4)
+            body = v_ColorPrimary;      //unselected
+        else                          
+            body = Green;      //mouseover
 
-    //tiermarker (+ border when color is dark) (blue or tier marker) :
-    vec4 tiermarker;
-    if (v_SelectedState > 1.4)
-            tiermarker = Black;                //selected + mouseover
-        else if (v_SelectedState > 0.9)
-            tiermarker = White;               //selected
-        else                        
-            tiermarker = Green;               //unselected
+	//tiermarker (+ border when color is dark) (blue or tier marker) :
+	vec4 tiermarker;
+	if (v_SelectedState > 0.9)
+            tiermarker = Black;         //selected
+        else if (v_SelectedState > 0.4)
+            tiermarker = White;         //unselected
+        else                          
+            tiermarker = Green;         //mouseover
 
-    //outer (Red)
-    vec4 outer;
-    if (v_SelectedState > 1.4)
-            outer = v_ColorPrimary;       //selected + mouseover
-        else if (v_SelectedState > 0.9)
-            outer = Black;                           //selected
-        else                        
-            outer = White;                          //unselected
+	//outer (Red)
+	vec4 outer;
+	if (v_SelectedState > 0.9)
+            outer = v_ColorPrimary;     //selected
+        else if (v_SelectedState > 0.4)
+            outer = Black;              //unselected
+        else                          
+            outer = White;              //mouseover
 
-    //and highlight (black):
+	//and highlight (black): 
         vec4 highlight;
-        if (v_SelectedState > 1.4)
-            highlight = v_ColorPrimary;  //selected + mouseover
-        else if (v_SelectedState > 0.9)
-            highlight = Trans;                     //selected
-        else                        
-            highlight = Green;                    //unselected
+        if (v_SelectedState > 0.9)
+            highlight = v_ColorPrimary; //selected
+        else if (v_SelectedState > 0.4)
+            highlight = Trans;          //unselected
+        else                          
+            highlight = Green; //mouseover
 
 
 
