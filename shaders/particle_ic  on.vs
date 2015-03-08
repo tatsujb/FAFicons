@@ -52,14 +52,9 @@ void main()
     worldPos.xy /= halfScreenSize;
     worldPos.xy -= 1.0;
 
-    //v_SelectedState = vUVAndExtra.z;
     if (vUVAndExtra.z > 0)
         v_SelectedState = 1;
-<<<<<<< HEAD
-    else if (posAndScale.w > 51)
-=======
-    else if (posAndScale.w > 52)
->>>>>>> 75b986da74ac7fb476bdb0a8a42770129bd35bed
+    else if (posAndScale.w > 48.5)
         v_SelectedState = 0.5;
     else
         v_SelectedState = 0;
