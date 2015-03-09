@@ -1,0 +1,21 @@
+{
+    "context": "client",
+    "identifier": "com.pa.tatsu.FAFicons",
+    "display_name": "Supreme Commander Icons (FAF)",
+    "description": "Forged Alliance Forever-inspired icons",
+    "author": "tatsu",
+    "version": "17",
+    "build": "76557",
+    "date": "2015/03/08",
+    "signature": "not yet implemented",
+    "forum": "https://forums.uberent.com/threads/rel-sup-com-strategic-icons.48554/",
+    "icon": "http://pamods.github.io/icons/supcom.png",
+    "category": [
+        "in-game",
+        "ui",
+        "strategic icons"
+    ],
+    "id": "FAFicons",
+    "priority": 100,
+    "enabled": true
+}
