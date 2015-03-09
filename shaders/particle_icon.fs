@@ -39,14 +39,9 @@ vec4 combo(in vec3 col,    in vec4 col000, in vec4 col111,
     }
 
 
-<<<<<<< HEAD
 vec4 Drey = vec4(0.1,0.1,0.1,1.0);
 vec4 Grey = vec4(0.69,0.69,0.69,1.0);
 vec4 Green = vec4(0.2,1.0,0.8,1.0);
-=======
-//vec4 tYellow = vec4(0.859,0.851,0.145,1.0);
-vec4 Green = vec4(0.0,1.0,0.0,1.0);
->>>>>>> 472b42f594dde065f0dca89f468094cddfabd72f
 vec4 Yellow = vec4(1.0,1.0,0.0,1.0);	
 vec4 White = vec4(1.0,1.0,1.0,1.0);
 vec4 Black = vec4(0.0,0.0,0.0,1.0);
@@ -60,30 +55,15 @@ void main()
     else
     {
         float luma = getLuma(v_ColorPrimary.rgb);
-<<<<<<< HEAD
 	vec4 ipp;
         vec4 iip;
         vec4 pip;
         vec4 ipi;
 	vec4 nuke;
-=======
-        
-        vec4 pip;
-        vec4 ipi;
-        vec4 border;
-
-	//vec4 nukin;
-		//if (isClose(v_ColorPrimary.rgb, tYellow))
-		//	nukin = Green;
-		//else
-
-	//nukin = Yellow;
->>>>>>> 472b42f594dde065f0dca89f468094cddfabd72f
 
 	//toogle apperace between selected, unselected and mouseover
 	//for body (is either ipi or pip depending on how light or dark) (basically team color) :
 	vec4 body;	
-<<<<<<< HEAD
 	if (v_SelectedState < -1.9) 
             body = v_ColorPrimary;             //mouseover
         else if (v_SelectedState < -0.9)
@@ -200,46 +180,10 @@ void main()
             highlight3 = White;        //selected + mouseover (unused)
 
 
-=======
-	if (v_SelectedState > 0.9) 
-            body = White;               //selected
-        else if (v_SelectedState > 0.4)
-            body = v_ColorPrimary;      //unselected
-        else                          
-            body = Green;      //mouseover
-
-	//tiermarker (+ border when color is dark) (blue or tier marker) :
-	vec4 tiermarker;
-	if (v_SelectedState > 0.9)
-            tiermarker = Black;         //selected
-        else if (v_SelectedState > 0.4)
-            tiermarker = White;         //unselected
-        else                          
-            tiermarker = Green;         //mouseover
-
-	//outer (Red)
-	vec4 outer;
-	if (v_SelectedState > 0.9)
-            outer = v_ColorPrimary;     //selected
-        else if (v_SelectedState > 0.4)
-            outer = Black;              //unselected
-        else                          
-            outer = White;              //mouseover
-
-	//and highlight (black): 
-        vec4 highlight;
-        if (v_SelectedState > 0.9)
-            highlight = v_ColorPrimary; //selected
-        else if (v_SelectedState > 0.4)
-            highlight = Trans;          //unselected
-        else                          
-            highlight = Green; //mouseover
->>>>>>> 472b42f594dde065f0dca89f468094cddfabd72f
 
 
 
 	// gauge closeness of team color to black
-<<<<<<< HEAD
 	// if team color is too dark invert ipp color and tier two marker color
 	if (luma > 0.60)
 	{ 
@@ -287,27 +231,6 @@ void main()
         color.a = color.a * texel.a;
         // the above can be changed to, for instance,
         // color.a = color.a * texel.a;
-=======
-        if (luma > 0.12)// if team color is too dark invert border color and tier two marker color
-        { 
-            pip = White;        // in this mode tiermarker (pip (blue) stays white whether selected, mousover or unselected) 
-            ipi = body;         // ipi (yellow) receives body color
-            border = outer;     // border (red) recieves outer color
-        }
-        else
-        {
-            pip = tiermarker;   // in this mode pip becomes addapts to the color of the border accordignly
-            ipi = outer;        // ipi (yellow) recieves outer color
-            border = body;      // border (red) recieves body color
-        }
-                                                    //nukin
-		       	              //black,   white, red,  green, blue,yellow,magenta,cyan (NEVER USE CYAN, CYAN HATES YOU)
-        vec4 color = combo(texel.rgb, highlight, Black, border, White, pip, ipi, Yellow, Black);
-        color.a = color.a * texel.a;
-        // the above can be changed to, for instance,
-        // color.a = color.a * texel.a;
-
->>>>>>> 472b42f594dde065f0dca89f468094cddfabd72f
         // for transparent icons
         out_FragColor = color;
     }
