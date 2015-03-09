@@ -203,7 +203,7 @@ void main()
 	}
 	else if (luma > 0.12)
 	{ 
-            pip = tiermarker;   // red, light-blue, pink, organge 100% normal sheme 
+            pip = tiermarker;   // red, light-blue, pink, organge, brown, and gree 100% normal sheme 
             ipi = body;         // 
             ipp = border;     // 
 	    iip = highlight;
@@ -211,10 +211,10 @@ void main()
         }
 	else if (luma > 0.07)
         {
-            pip = tiermarker2;   // this is purple dark blue and brown sheme (inverted border)
+            pip = tiermarker2;   // this is purple and dark blue n sheme (inverted border)
             ipi = border;        // 
             ipp = body;      // 
-	    iip = highlight;
+	    iip = highlight3;
 	    nuke = Yellow;
         }
         else
