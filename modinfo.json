@@ -1,0 +1,21 @@
+{
+    "context": "client",
+    "identifier": "com.pa.tatsu.FAFicons",
+    "display_name": "Supreme Commander Icons (FAF)",
+    "description": "Forged Alliance Forever-inspired icons for Titans, compatible with classic PA, compatible with all other mods, supports a variety of features, namely addaptive border color according to team color, persistant nuke color and TRUE white and black colors for the enamoured.",
+    "author": "tatsu",
+    "version": "22",
+    "build": "86422",
+    "date": "2015/08/19",
+    "signature": "not yet implemented",
+    "forum": "https://forums.uberent.com/threads/rel-sup-com-strategic-icons.48554/",
+    "icon": "http://pamods.github.io/icons/supcom.png",
+    "category": [
+        "in-game",
+        "ui",
+        "strategic icons"
+    ],
+    "id": "FAFicons",
+    "priority": 100,
+    "enabled": true
+}
