@@ -146,6 +146,16 @@ void main()
         else                          
             border3 = White;            //selected + mouseover (unused)
 
+	vec4 border4;
+	if (v_SelectedState < -1.9)
+            border4 = Green;                     //mouseover
+        else if (v_SelectedState < -0.9)
+            border4 = Grey;                     //unselected
+	else if (v_SelectedState < 1.1)
+            border4 = White;            //selected
+        else                          
+            border4 = White;            //selected + mouseover (unused)
+
 
 
 	//and highlight (black): 
@@ -211,10 +221,10 @@ void main()
         }
 	else if (luma > 0.07)
         {
-            pip = tiermarker2;   // this is purple and dark blue n sheme (inverted border)
-            ipi = border;        // 
-            ipp = body;      // 
-	    iip = highlight3;
+            pip = tiermarker;   // this is purple and dark blue n sheme (inverted border)
+            ipi = v_ColorPrimary;        // 
+            ipp = border4;      // 
+	    iip = highlight;
 	    nuke = Yellow;
         }
         else
