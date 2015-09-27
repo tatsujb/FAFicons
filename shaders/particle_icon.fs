@@ -189,6 +189,16 @@ void main()
         else                          
             highlight2 = White;        //selected + mouseover (unused)
 
+		vec4 highlight3;
+        if (v_SelectedState < -1.9)
+            highlight3 = Trans;                 //mouseover
+        else if (v_SelectedState < -0.9)
+            highlight3 = Trans;                 //unselected
+	else if (v_SelectedState < 1.1)
+            highlight3 = Grey;        //selected
+        else                          
+            highlight3 = Grey;        //selected + mouseover (unused)
+
 
 
 
