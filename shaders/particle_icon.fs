@@ -114,6 +114,7 @@ void main()
             tiermarker2 = Black;                //selected
         else                          
             tiermarker2 = Black;                //selected + mouseover (unused)
+			
 
 	//border (Red)
 	vec4 border;
@@ -156,6 +157,15 @@ void main()
         else                          
             border4 = White;            //selected + mouseover (unused)
 
+	vec4 border5;
+	if (v_SelectedState < -1.9)
+            border5 = Green;                     //mouseover
+        else if (v_SelectedState < -0.9)
+            border5 = White;                     //unselected
+	else if (v_SelectedState < 1.1)
+            border5 = Grey;            //selected
+        else                          
+            border5 = Grey;            //selected + mouseover (unused)
 
 
 	//and highlight (black): 
@@ -175,19 +185,9 @@ void main()
         else if (v_SelectedState < -0.9)
             highlight2 = Trans;                 //unselected
 	else if (v_SelectedState < 1.1)
-            highlight2 = Grey;        //selected
+            highlight2 = White;        //selected
         else                          
-            highlight2 = Grey;        //selected + mouseover (unused)
-
-        vec4 highlight3;
-        if (v_SelectedState < -1.9)
-            highlight3 = Trans;                 //mouseover
-        else if (v_SelectedState < -0.9)
-            highlight3 = Trans;                 //unselected
-	else if (v_SelectedState < 1.1)
-            highlight3 = White;        //selected
-        else                          
-            highlight3 = White;        //selected + mouseover (unused)
+            highlight2 = White;        //selected + mouseover (unused)
 
 
 
@@ -229,9 +229,9 @@ void main()
         }
         else
 	{
-            pip = tiermarker2;   // this is black's color sheme alone (inverted border + extras)
-            ipi = body2;       //
-            ipp = border2;       // 
+            pip = Black;   // this is black's color sheme alone (inverted border + extras)
+            ipi = Black;       //
+            ipp = border5;       // 
 	    iip = highlight2;
 	    nuke = Yellow;
 	}
