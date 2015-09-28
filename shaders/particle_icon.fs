@@ -231,7 +231,7 @@ void main()
         }
 	else if (luma > 0.07)
         {
-            pip = tiermarker;   // this is purple and dark blue n sheme (inverted border)
+            pip = Black;   // this is purple and dark blue n sheme (inverted border)
             ipi = v_ColorPrimary;        // 
             ipp = border4;      // 
 	    iip = highlight;
