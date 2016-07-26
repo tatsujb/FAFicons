@@ -4,7 +4,7 @@
     "display_name": "Supreme Commander Icons (FAF)",
     "description": "Forged Alliance Forever-inspired icons for Titans, compatible with classic PA, compatible with all other mods, supports a variety of features, namely addaptive border color according to team color, persistant nuke color and TRUE white and black colors for the enamoured.",
     "author": "tatsu",
-    "version": "31",
+    "version": "32",
     "build": "94684",
     "date": "2016/07/26",
     "signature": "(not yet implemented)",
@@ -45,6 +45,6 @@
     "framework": false,
     "available": true,
     "classic": true,
-    "titans": true
+    "titans": true,
     "enabled": true
 }
